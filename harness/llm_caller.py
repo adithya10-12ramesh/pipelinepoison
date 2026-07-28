@@ -139,9 +139,9 @@ class BaseLLMCaller(ABC):
 class GeminiCaller(BaseLLMCaller):
     provider_name = "gemini"
 
-    def __init__(self, model: str = "gemini-2.5-flash", rpm: int = 10, **kwargs):
-        '''cleaimport google.generativeai as genai'''
-        from google import genai
+    def __init__(self, model: str = "gemini-3.5-flash", rpm: int = 10, **kwargs):
+        # pyrefly: ignore [missing-import]
+        import google.generativeai as genai
 
         api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
