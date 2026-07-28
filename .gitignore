@@ -1,0 +1,19 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Results (large / regenerable)
+results/*.jsonl
+results/*.csv
+!results/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
